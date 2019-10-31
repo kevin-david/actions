@@ -1,0 +1,22 @@
+name: 'Archive project board'
+description: 'Goes through the last column of a project board and archives any issues which have not been been updated since archive-period-days'
+inputs:
+  organization:  # id of input
+    description: 'The organization which the project belongs to'
+    required: true
+  project:  # id of input
+    description: 'The project board #'
+    required: true
+  token:
+    description: 'PAT token with access to the board - must be a secret.'
+    required: true
+  archive-period-days:
+    description: 'The number of days since the issue has been last updated to consider it for archival.'
+    required: true
+    default: 14
+outputs:
+  archived-items: # id of output
+    description: 'The # of items which were archived.'
+runs:
+  using: 'node12'
+  main: 'index.js'
