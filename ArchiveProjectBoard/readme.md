@@ -28,6 +28,8 @@ The # of items which were archived.
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1
+uses: chandru-r/actions/ArchiveProjectBoard@master
 with:
-  who-to-greet: 'Mona the Octocat'
+  organization: 'TestProject'
+  project: 1
+  token: ${{ secrets.ProjectPATSecret }}

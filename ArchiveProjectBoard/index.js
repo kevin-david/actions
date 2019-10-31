@@ -87,8 +87,6 @@ async function archiveItems() {
                     const message = `Card: ${result.updateProjectCard.projectCard.id}, title: ${card.content.title}, archived at: ${result.updateProjectCard.projectCard.updatedAt}`; 
                     console.log(message);
                     archivedCount++;
-
-                    break;
                 }
             }
         }            
