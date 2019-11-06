@@ -1,6 +1,6 @@
 # Archive Project Board javascript action
 
-Goes through the last column of a project board and archives any issues which have not been been updated since archive-period-days
+Goes through the last column of a project board (which this Action assumes means "Done") and archives any issues which have not been been updated since `archive-period-days`.
 
 ## Inputs
 
@@ -28,8 +28,10 @@ The # of items which were archived.
 
 ## Example usage
 
+```
 uses: chandru-r/actions/ArchiveProjectBoard@master
 with:
-  organization: 'TestProject'
+  organization: 'MyOrg'
   project: 1
   token: ${{ secrets.ProjectPATSecret }}
+```
